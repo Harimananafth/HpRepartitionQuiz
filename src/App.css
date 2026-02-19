@@ -1,1 +1,71 @@
+@font-face {
+  font-family: "MagicSchoolOne";
+  src: url("./fonts/MagicSchoolOne.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "MagicSchoolTwo";
+  src: url("./fonts/MagicSchoolTwo.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("./fonts/Cinzel-VariableFont_wght.ttf") format("truetype");
+  font-display: swap;
+}
 @import "tailwindcss";
+
+@theme {
+  --font-MagicSchoolOne: "MagicSchoolOne", serif;
+  --font-MagicSchoolTwo: "MagicSchoolTwo", serif;
+  --font-Cinzel: "Cinzel", serif;
+  --color-dark-blue: #0a0e1a;
+  --color-gold: #d4af37;
+}
+
+@keyframes magic-float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+.animate-magic-float {
+  animation-name: magic-float;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.magic-text {
+  text-shadow:
+    0 0 10px rgba(212, 175, 55, 0.5),
+    0 0 20px rgba(212, 175, 55, 0.2);
+  letter-spacing: 2px;
+}
+.btn-magic:hover {
+  color: var(--color-gold);
+  border-color: white;
+  background: white;
+  box-shadow:
+    0 0 10px var(--color-gold),
+    0 0 20px var(--color-gold);
+}
+@keyframes fadeIn {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
