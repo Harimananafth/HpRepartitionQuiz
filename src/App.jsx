@@ -1,20 +1,23 @@
-import { Route, Routes } from "react-router-dom";
-import "./App.css";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "motion/react";
 import Home from "./App/home";
-import MagicDust from "./components/magicDust";
 import Quiz from "./App/quiz";
+import MagicDust from "./components/magicDust";
+import "./App.css";
 
-function App() {
+export default function App() {
+  const location = useLocation();
+
   return (
     <div className="bg-dark-blue h-screen flex relative overflow-hidden">
-      <MagicDust count={150} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/quiz" element={<Quiz />} />
-        {/* <Route path="*" element={<NotFound />} /> */}
-      </Routes>
+      <MagicDust />
+
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home />} />
+          <Route path="/quiz" element={<Quiz />} />
+        </Routes>
+      </AnimatePresence>
     </div>
   );
 }
-
-export default App;
