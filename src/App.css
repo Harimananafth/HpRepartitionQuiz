@@ -44,6 +44,23 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+.bg {
+  background-image:
+    url(/horizons_village.png),
+    linear-gradient(180deg, #15111d, #323657 121.35%);
+
+  background-repeat: no-repeat, no-repeat, no-repeat;
+
+  /* On ajuste ici : */
+  /* 1. Village : 150% (au lieu de contain) pour l'agrandir */
+  /* 2. Stars : cover pour remplir tout l'écran */
+  /* 3. Gradient : cover pour couvrir le reste */
+  background-size: 170%, cover;
+
+  background-position:
+    center 101%,
+    bottom;
+}
 
 .magic-text {
   text-shadow:

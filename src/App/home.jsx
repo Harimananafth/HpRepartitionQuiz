@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion, scale } from "motion/react";
 import { pageVariants } from "../utils/page.animation";
+import MagicDust from "../components/magicDust";
 
 // Animation des éléments texte
 const item = {
@@ -34,8 +35,9 @@ export default function Home() {
       initial="initial"
       animate="animate"
       exit="exit"
-      className="p-10 flex items-center justify-between px-25"
+      className="p-25 h-screen flex items-center justify-between"
     >
+      <MagicDust/>
       <div className="flex flex-col justify-start w-3/5 gap-3 text-left">
         <motion.h2
           initial="hidden"
@@ -88,17 +90,15 @@ export default function Home() {
         </motion.div>
       </div>
 
-      <motion.div
-        variants={floating}
-        animate="animate"
+      <div
         className="flex items-center justify-center"
       >
         <img
           src="/logo.png"
           alt="Logo Poudlard"
-          className="h-80 drop-shadow-[0_0_15px_rgba(255,215,0,0.6)]"
+          className="h-80 drop-shadow-[0_0_5px_rgba(255,215,0,0.6)]"
         />
-      </motion.div>
+      </div>
     </motion.main>
   );
 }

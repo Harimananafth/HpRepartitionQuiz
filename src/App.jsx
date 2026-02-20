@@ -9,8 +9,8 @@ export default function App() {
   const location = useLocation();
 
   return (
-    <div className="bg-dark-blue h-screen flex relative overflow-hidden">
-      <MagicDust />
+    <div className="bg relative overflow-hidden">
+      <MagicDust count={100}/>
 
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>

@@ -1,0 +1,224 @@
+{
+  "quiz": [
+    {
+      "id": 1,
+      "question": "Si tu découvres un objet magique abandonné dans un couloir, que fais-tu en premier ?",
+      "options": [
+        {
+          "text": "Je le prends immédiatement et explore son usage",
+          "points": { "Gryffondor": 2 }
+        },
+        {
+          "text": "J’observe discrètement autour avant de le toucher",
+          "points": { "Serpentard": 2 }
+        },
+        {
+          "text": "Je le rapporte à un professeur pour qu’il l’examine",
+          "points": { "Poufsouffle": 2 }
+        },
+        {
+          "text": "Je tente de le comprendre par la magie avant de décider",
+          "points": { "Serdaigle": 2 }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Lors d’un projet en groupe, quel rôle te semble le plus naturel ?",
+      "options": [
+        {
+          "text": "Le leader qui prend des décisions rapides",
+          "points": { "Gryffondor": 2 }
+        },
+        {
+          "text": "Le stratège qui prévoit toutes les conséquences",
+          "points": { "Serpentard": 2 }
+        },
+        {
+          "text": "Le médiateur qui s’assure que tout le monde avance",
+          "points": { "Poufsouffle": 2 }
+        },
+        {
+          "text": "Le chercheur qui apporte des idées innovantes",
+          "points": { "Serdaigle": 2 }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Si un mystère se présente devant toi dans la bibliothèque, tu…",
+      "options": [
+        {
+          "text": "Cherches le moyen de résoudre le mystère toi-même",
+          "points": { "Gryffondor": 2 }
+        },
+        {
+          "text": "Élaborer une théorie complexe sur les indices",
+          "points": { "Serdaigle": 2 }
+        },
+        {
+          "text": "Te renseignes sur ceux qui ont déjà été confrontés au problème",
+          "points": { "Serpentard": 2 }
+        },
+        {
+          "text": "Proposes ton aide aux autres lecteurs pour comprendre",
+          "points": { "Poufsouffle": 2 }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Tu as l’occasion de créer une potion unique. Quelle approche adoptes-tu ?",
+      "options": [
+        {
+          "text": "Je teste plusieurs ingrédients sans peur du risque",
+          "points": { "Gryffondor": 2 }
+        },
+        {
+          "text": "Je fais des calculs précis avant chaque ajout",
+          "points": { "Serdaigle": 2 }
+        },
+        {
+          "text": "Je choisis des ingrédients sûrs et accessibles pour tous",
+          "points": { "Poufsouffle": 2 }
+        },
+        {
+          "text": "Je cherche l’ingrédient rare qui donnera un avantage",
+          "points": { "Serpentard": 2 }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "En voyage à l’étranger, tu es confronté à une situation imprévue. Comment réagis-tu ?",
+      "options": [
+        {
+          "text": "Tu fonces tête baissée et improvises",
+          "points": { "Gryffondor": 2 }
+        },
+        {
+          "text": "Tu observes et attends le meilleur moment pour agir",
+          "points": { "Serpentard": 2 }
+        },
+        {
+          "text": "Tu aides ceux qui semblent perdus autour de toi",
+          "points": { "Poufsouffle": 2 }
+        },
+        {
+          "text": "Tu étudies la situation pour trouver la solution la plus logique",
+          "points": { "Serdaigle": 2 }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "Si tu pouvais apprendre une compétence secrète, laquelle choisirais-tu ?",
+      "options": [
+        {
+          "text": "Maîtriser l’art du duel et de la bravoure",
+          "points": { "Gryffondor": 2 }
+        },
+        {
+          "text": "Décoder des mystères que personne ne comprend",
+          "points": { "Serdaigle": 2 }
+        },
+        {
+          "text": "Influencer les situations en ta faveur discrètement",
+          "points": { "Serpentard": 2 }
+        },
+        {
+          "text": "Soutenir et protéger ceux qui en ont besoin",
+          "points": { "Poufsouffle": 2 }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "question": "On te propose un objet magique interdit mais tentant. Que fais-tu ?",
+      "options": [
+        {
+          "text": "Tu le prends, défiant les règles pour le découvrir",
+          "points": { "Gryffondor": 2 }
+        },
+        {
+          "text": "Tu t’assures que personne ne remarque ton intérêt",
+          "points": { "Serpentard": 2 }
+        },
+        {
+          "text": "Tu décides de ne pas risquer la sécurité de tous",
+          "points": { "Poufsouffle": 2 }
+        },
+        {
+          "text": "Tu essaies de comprendre son fonctionnement avant toute action",
+          "points": { "Serdaigle": 2 }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "question": "Lors d’un débat intense, comment interviens-tu ?",
+      "options": [
+        {
+          "text": "Tu oses exprimer ton opinion sans hésitation",
+          "points": { "Gryffondor": 2 }
+        },
+        {
+          "text": "Tu trouves un argument qui surprend tout le monde",
+          "points": { "Serdaigle": 2 }
+        },
+        {
+          "text": "Tu essaies de calmer les tensions et trouver un compromis",
+          "points": { "Poufsouffle": 2 }
+        },
+        {
+          "text": "Tu utilises la discussion pour faire avancer tes objectifs",
+          "points": { "Serpentard": 2 }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "question": "Si tu découvres un passage secret dans l’école, que fais-tu ?",
+      "options": [
+        {
+          "text": "Tu explores immédiatement le passage sans te poser de questions",
+          "points": { "Gryffondor": 2 }
+        },
+        {
+          "text": "Tu observes attentivement et prends des notes pour comprendre",
+          "points": { "Serdaigle": 2 }
+        },
+        {
+          "text": "Tu l’utilises pour obtenir un avantage stratégique",
+          "points": { "Serpentard": 2 }
+        },
+        {
+          "text": "Tu informes ceux qui pourraient être intéressés de manière sûre",
+          "points": { "Poufsouffle": 2 }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "question": "Si tu devais défendre un ami injustement accusé, que ferais-tu ?",
+      "options": [
+        {
+          "text": "Tu te lèves courageusement pour le défendre, peu importe les conséquences",
+          "points": { "Gryffondor": 2 }
+        },
+        {
+          "text": "Tu rassembles des preuves pour prouver son innocence",
+          "points": { "Serdaigle": 2 }
+        },
+        {
+          "text": "Tu utilises ton influence pour protéger ton ami discrètement",
+          "points": { "Serpentard": 2 }
+        },
+        {
+          "text": "Tu restes à ses côtés pour le soutenir moralement",
+          "points": { "Poufsouffle": 2 }
+        }
+      ]
+    }
+  ]
+}
