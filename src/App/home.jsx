@@ -1,32 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion, scale } from "motion/react";
-import { pageVariants } from "../utils/page.animation";
-import MagicDust from "../components/magicDust";
-
-// Animation des éléments texte
-const item = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut",
-    },
-  },
-};
-
-// Animation flottante du logo
-const floating = {
-  animate: {
-    y: [0, -15, 0],
-    transition: {
-      duration: 4,
-      repeat: Infinity,
-      ease: "easeInOut",
-    },
-  },
-};
+import { pageVariants, item } from "../utils/page.animation";
 
 export default function Home() {
   return (
@@ -37,7 +11,6 @@ export default function Home() {
       exit="exit"
       className="p-25 h-screen flex items-center justify-between"
     >
-      <MagicDust/>
       <div className="flex flex-col justify-start w-3/5 gap-3 text-left">
         <motion.h2
           initial="hidden"
@@ -71,6 +44,8 @@ export default function Home() {
         </motion.p>
 
         <motion.div
+          initial="hidden"
+          animate="visible"
           variants={item}
           whileTap={{ scale: 0.9 }}
         >
@@ -90,13 +65,11 @@ export default function Home() {
         </motion.div>
       </div>
 
-      <div
-        className="flex items-center justify-center"
-      >
+      <div className="flex items-center justify-center">
         <img
           src="/logo.png"
           alt="Logo Poudlard"
-          className="h-80 drop-shadow-[0_0_5px_rgba(255,215,0,0.6)]"
+          className="h-75 drop-shadow-[0_0_5px_rgba(255,215,0,0.6)]"
         />
       </div>
     </motion.main>

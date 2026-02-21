@@ -4,6 +4,7 @@ import Home from "./App/home";
 import Quiz from "./App/quiz";
 import MagicDust from "./components/magicDust";
 import "./App.css";
+import Result from "./App/result";
 
 export default function App() {
   const location = useLocation();
@@ -16,6 +17,7 @@ export default function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/quiz" element={<Quiz />} />
+          <Route path="/result" element={<Result />} />
         </Routes>
       </AnimatePresence>
     </div>

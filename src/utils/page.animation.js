@@ -1,13 +1,13 @@
+
+
 const pageVariants = {
   initial: {
     opacity: 0,
-    y: 40,
-    scale: 0.98,
+    scale: 0.9,
     filter: "blur(8px)",
   },
   animate: {
     opacity: 1,
-    y: 0,
     scale: 1,
     filter: "blur(0px)",
     transition: {
@@ -17,8 +17,7 @@ const pageVariants = {
   },
   exit: {
     opacity: 0,
-    y: -40,
-    scale: 0.98,
+    scale: 1.1,
     filter: "blur(6px)",
     transition: {
       duration: 0.5,
@@ -27,4 +26,62 @@ const pageVariants = {
   },
 };
 
-export { pageVariants };
+// Animation des éléments texte
+const item = {
+  hidden: { opacity: 0, y: -30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay : 0.4,
+      duration: 0.8,
+      default: { type: "spring" },
+      opacity: { ease: "linear" }
+    },
+  },
+};
+const itemList = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      default: { type: "spring" },
+      opacity: { ease: "linear" }
+    },
+  },
+};
+
+const listVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.10,
+    },
+  },
+  exit:{}
+}
+
+const optionVariants = {
+  hidden: {
+    opacity: 0,
+    y: 80,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.2,
+    },
+  },
+  exit: {
+    opacity: 0,
+    x: 80,
+    transition: {
+      duration: 0.2,
+    },
+  },
+}
+
+export { pageVariants, item, listVariants, optionVariants, itemList };
