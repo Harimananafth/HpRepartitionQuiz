@@ -1,4 +1,4 @@
-
+import { Rotate3D } from "lucide-react";
 
 const pageVariants = {
   initial: {
@@ -33,10 +33,10 @@ const item = {
     opacity: 1,
     y: 0,
     transition: {
-      delay : 0.4,
+      delay: 0.4,
       duration: 0.8,
       default: { type: "spring" },
-      opacity: { ease: "linear" }
+      opacity: { ease: "linear" },
     },
   },
 };
@@ -48,7 +48,7 @@ const itemList = {
     transition: {
       duration: 0.8,
       default: { type: "spring" },
-      opacity: { ease: "linear" }
+      opacity: { ease: "linear" },
     },
   },
 };
@@ -57,11 +57,15 @@ const listVariants = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.10,
+      staggerChildren: 0.1,
     },
   },
-  exit:{}
-}
+  exit: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
 
 const optionVariants = {
   hidden: {
@@ -82,6 +86,83 @@ const optionVariants = {
       duration: 0.2,
     },
   },
-}
+};
 
-export { pageVariants, item, listVariants, optionVariants, itemList };
+const loaderVariants = {
+  hidden: {
+    opacity: 0,
+    y: 10,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.2,
+      default: { type: "spring" },
+      opacity: { ease: "linear" },
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -5,
+    transition: {
+      duration: 0.2,
+    },
+  },
+};
+
+const pageloaderVariants = {
+  initial: {
+    opacity: 0,
+    filter: "blur(8px)",
+  },
+  animate: {
+    opacity: 1,
+    filter: "blur(0px)",
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+  exit: {
+    opacity: 0,
+    scale: 1.1,
+    filter: "blur(6px)",
+    transition: {
+      duration: 0.5,
+      ease: "easeIn",
+    },
+  },
+};
+const illustrationVar = {
+  initial: {
+    opacity: 0,
+    filter: "blur(8px)",
+  },
+  animate: {
+    opacity: 1,
+    filter: "blur(0px)",
+    transition: {
+      duration: 0.5,
+    },
+  },
+  exit: {
+    opacity: 0,
+    filter: "blur(6px)",
+    transition: {
+      duration: 0.5,
+      ease: "easeIn",
+    },
+  },
+};
+
+export {
+  pageVariants,
+  item,
+  listVariants,
+  optionVariants,
+  itemList,
+  loaderVariants,
+  pageloaderVariants,
+  illustrationVar,
+};

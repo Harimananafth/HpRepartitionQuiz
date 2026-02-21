@@ -5,6 +5,7 @@ import Quiz from "./App/quiz";
 import MagicDust from "./components/magicDust";
 import "./App.css";
 import Result from "./App/result";
+import FantasyLoader from "./components/fantasyLoader";
 
 export default function App() {
   const location = useLocation();
@@ -18,6 +19,8 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/result" element={<Result />} />
+          <Route path="/load" element={<FantasyLoader />} />
+
         </Routes>
       </AnimatePresence>
     </div>

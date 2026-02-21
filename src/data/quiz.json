@@ -2,6 +2,7 @@
   "quiz": [
     {
       "id": 1,
+      "img": "/quiz/question-1.png",
       "question": "Si tu découvres un objet magique abandonné dans un couloir, que fais-tu en premier ?",
       "options": [
         {
@@ -24,6 +25,7 @@
     },
     {
       "id": 2,
+      "img": "/quiz/question-2.png",
       "question": "Lors d’un projet en groupe, quel rôle te semble le plus naturel ?",
       "options": [
         {
@@ -46,6 +48,7 @@
     },
     {
       "id": 3,
+      "img": "/quiz/question-3.png",
       "question": "Si un mystère se présente devant toi dans la bibliothèque, tu…",
       "options": [
         {
@@ -68,6 +71,7 @@
     },
     {
       "id": 4,
+      "img": "/quiz/question-4.png",
       "question": "Tu as l’occasion de créer une potion unique. Quelle approche adoptes-tu ?",
       "options": [
         {
@@ -90,6 +94,7 @@
     },
     {
       "id": 5,
+      "img": "/quiz/question-5.png",
       "question": "En voyage à l’étranger, tu es confronté à une situation imprévue. Comment réagis-tu ?",
       "options": [
         {
@@ -112,6 +117,7 @@
     },
     {
       "id": 6,
+      "img": "/quiz/question-6.png",
       "question": "Si tu pouvais apprendre une compétence secrète, laquelle choisirais-tu ?",
       "options": [
         {
@@ -134,6 +140,7 @@
     },
     {
       "id": 7,
+      "img": "/quiz/question-7.png",
       "question": "On te propose un objet magique interdit mais tentant. Que fais-tu ?",
       "options": [
         {
@@ -156,6 +163,7 @@
     },
     {
       "id": 8,
+      "img": "/quiz/question-8.png",
       "question": "Lors d’un débat intense, comment interviens-tu ?",
       "options": [
         {
@@ -178,6 +186,7 @@
     },
     {
       "id": 9,
+      "img": "/quiz/question-9.png",
       "question": "Si tu découvres un passage secret dans l’école, que fais-tu ?",
       "options": [
         {
@@ -200,6 +209,7 @@
     },
     {
       "id": 10,
+      "img": "/quiz/question-10.png",
       "question": "Si tu devais défendre un ami injustement accusé, que ferais-tu ?",
       "options": [
         {

@@ -1,10 +1,43 @@
+import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "motion/react";
+import { loaderSentences } from "../utils/loaderSentences";
+import { loaderVariants, pageloaderVariants } from "../utils/page.animation";
+
 export default function FantasyLoader() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (currentIndex < loaderSentences.length - 1) {
+      const timer = setTimeout(() => {
+        setCurrentIndex((prev) => prev + 1);
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [currentIndex]);
+
   return (
-    <div className="flex items-center justify-center h-screen bg-black">
-      <div className="relative">
-        <div className="w-32 h-32 border-4 border-yellow-400 rounded-full animate-spin"></div>
-        <div className="absolute inset-0 w-32 h-32 border-4 border-purple-500 rounded-full animate-ping opacity-30"></div>
-      </div>
-    </div>
+    <motion.div
+      variants={pageloaderVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      className="flex flex-col items-center justify-center gap-4 h-screen bg-black/50 text-white font-bold font-Cinzel"
+    >
+      <img src="/Choixpeau.gif" alt="Choixpeau magique" className="h-28" />
+
+      <AnimatePresence mode="wait">
+        <motion.p
+          key={currentIndex}
+          variants={loaderVariants}
+          initial="hidden"
+          animate="show"
+          exit="exit"
+          className="text-center px-6 whitespace-pre-line"
+        >
+          {loaderSentences[currentIndex]}
+        </motion.p>
+      </AnimatePresence>
+    </motion.div>
   );
 }

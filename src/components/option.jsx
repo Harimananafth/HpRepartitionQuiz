@@ -1,10 +1,12 @@
 import { motion } from "motion/react";
 import { optionVariants } from "../utils/page.animation";
-export default function Option({ option, onClick }) {
+export default function Option({ option, onClick, isTransitioning }) {
   return (
     <motion.li
       variants={optionVariants}
-      whileTap={{ scale: 0.9 }}
+      whileTap={isTransitioning ? {} : { scale: 0.95 }}
+      disabled={isTransitioning}
+      pointer-events-none={isTransitioning}
       onClick={onClick}
       className="cursor-pointer relative group font-Cinzel font-bold 
                         w-full h-14
