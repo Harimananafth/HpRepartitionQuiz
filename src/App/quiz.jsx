@@ -40,7 +40,7 @@ export default function Quiz() {
     setTimeout(() => {
       setI((prevI) => prevI + 1);
       setIsTransitioning(false);
-    }, 400);
+    }, 300);
   }
 
   const question = quizData.quiz[i];
@@ -71,7 +71,7 @@ export default function Quiz() {
           />
         </AnimatePresence>
       </div>
-      <div>
+      <div className="px-5">
         <AnimatePresence mode="wait">
           <QuizForm key={question.id} question={question.question}>
             {question.options.map((option, index) => (

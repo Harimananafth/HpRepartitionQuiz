@@ -46,9 +46,16 @@ const itemList = {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 0.8,
+      duration: 1,
       default: { type: "spring" },
       opacity: { ease: "linear" },
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: -5,
+    transition: {
+      duration: 0.2,
     },
   },
 };
@@ -76,7 +83,7 @@ const optionVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.2,
+      duration: 0.4,
     },
   },
   exit: {
