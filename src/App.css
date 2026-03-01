@@ -24,6 +24,10 @@
   --font-Cinzel: "Cinzel", serif;
   --color-dark-blue: #0a0e1a;
   --color-gold: #d4af37;
+  --image-gryffondor: url(/house/bg-gryffondor.jpg);
+  --image-serpentard: url(/house/bg-serpentard.jpg);
+  --image-poufsouffle: url(/house/bg-poufsouffle.jpg);
+  --image-serdaigle: url(/house/bg-serdaigle.jpg);
 }
 
 @keyframes magic-float {

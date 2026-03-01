@@ -3,7 +3,7 @@ import { Rotate3D } from "lucide-react";
 const pageVariants = {
   initial: {
     opacity: 0,
-    scale: 0.9,
+    scale: .9,
     filter: "blur(8px)",
   },
   animate: {
@@ -121,10 +121,12 @@ const loaderVariants = {
 const pageloaderVariants = {
   initial: {
     opacity: 0,
+    scale: 1.1,
     filter: "blur(8px)",
   },
   animate: {
     opacity: 1,
+    scale: 1,
     filter: "blur(0px)",
     transition: {
       duration: 0.5,
