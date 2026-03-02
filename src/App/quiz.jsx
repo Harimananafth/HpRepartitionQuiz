@@ -55,9 +55,10 @@ export default function Quiz() {
       initial="initial"
       animate="animate"
       exit="exit"
-      className="py-25 gap-y-10 h-screen grid grid-cols-[40%_60%] grid-rows-[1fr_auto] items-center justify-between text-white"
+      className="h-screen flex flex-col md:grid md:grid-cols-[40%_60%] md:grid-rows-[1fr_auto] items-center justify-center md:justify-between text-white p-6 md:p-0 md:py-25 gap-y-6 md:gap-y-10 overflow-hidden relative "
     >
-      <div className="h-full flex items-center justify-center px-5">
+      {/* Container Image  */}
+      <div className="flex items-center justify-center w-full h-1/3 md:h-full px-5">
         <AnimatePresence mode="wait">
           <motion.img
             key={question.id}
@@ -67,11 +68,13 @@ export default function Quiz() {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="w-2/3 h-2/3 object-contain"
+            className="w-full h-full max-h-50 md:max-h-none md:w-2/3 md:h-2/3 object-contain drop-shadow-[0_0_20px_rgba(212,175,55,0.3)]"
           />
         </AnimatePresence>
       </div>
-      <div className="px-5">
+
+      {/* Container Formulaire  */}
+      <div className="w-full md:px-5 flex flex-col justify-center overflow-y-auto md:overflow-visible max-h-[50vh] md:max-h-none">
         <AnimatePresence mode="wait">
           <QuizForm key={question.id} question={question.question}>
             {question.options.map((option, index) => (
@@ -90,16 +93,17 @@ export default function Quiz() {
         </AnimatePresence>
       </div>
 
-      <footer className="col-span-2 text-center text-sm opacity-70 flex gap-3 items-center justify-center">
+      {/* Footer  */}
+      <footer className="w-full md:col-span-2 text-center text-sm opacity-70 flex gap-2 md:gap-3 items-center justify-center pb-4 md:pb-0">
         {quizData.quiz.map((_, j) => (
           <motion.div
             key={j}
             animate={{
-              scale: j === i ? 1.5 : 1,
+              scale: j === i ? 1.4 : 1,
               backgroundColor: j <= i ? "#d4af37" : "#555",
             }}
             transition={{ duration: 0.3 }}
-            className="w-2 h-2 rounded-full"
+            className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full"
           />
         ))}
       </footer>

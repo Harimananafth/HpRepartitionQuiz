@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { pageloaderVariants } from "../utils/page.animation";
+import { pageloaderVariants, pageVariants } from "../utils/page.animation";
 import { useNavigate } from "react-router-dom";
 import Gryffondor from "../components/gryffondor";
 import Serpentard from "../components/serpentard";
@@ -16,7 +16,7 @@ export default function Result() {
   };
 
   return (
-    <div className="relative h-screen w-full overflow-hidden bg-black text-white font-serif">
+    <div className="relative min-h-screen w-full font-serif flex flex-col">
       <AnimatePresence mode="wait">
         {house && (
           <motion.div
@@ -25,7 +25,7 @@ export default function Result() {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="h-full w-full flex flex-col items-center justify-center"
+            className="relative z-10 w-full"
           >
             {house === "Gryffondor" && <Gryffondor />}
             {house === "Serpentard" && <Serpentard />}
@@ -34,15 +34,22 @@ export default function Result() {
           </motion.div>
         )}
       </AnimatePresence>
-
       <motion.button
+        variants={pageVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
         whileTap={{ scale: 0.95 }}
         whileHover={{ scale: 1.05 }}
         onClick={handleRetry}
-        className="absolute cursor-pointer bottom-8 left-1/2 -translate-x-1/2 z-50 px-8 py-3 bg-black/40 backdrop-blur-md border border-white/20 rounded-full text-[10px] md:text-xs font-Cinzel tracking-[0.2em] hover:bg-white hover:text-black transition-all duration-500 shadow-2xl flex items-center gap-3"
+        className="fixed z-50 bottom-4 left-1/2 -translate-x-1/2 cursor-pointer 
+                   px-6 py-3 md:px-8 md:py-3 bg-black/60 backdrop-blur-xl 
+                   border border-gold/30 rounded-full 
+                   text-[10px] md:text-xs font-Cinzel tracking-[0.2em] text-gold
+                   hover:bg-gold hover:text-black transition-all duration-500 
+                   shadow-[0_0_20px_rgba(212,175,55,0.4)] flex items-center gap-3"
       >
-        <span>↺</span>
-
+        <span className="text-lg">↺</span>
         <span>Refaire le test</span>
       </motion.button>
     </div>
