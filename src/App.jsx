@@ -10,6 +10,8 @@ import ResultGuard from "./routes/resultGuard";
 import NotFound from "./App/notFound";
 import Gryffondor from "./components/gryffondor";
 import Poufsouffle from "./components/poufsouffle";
+import Serdaigle from "./components/serdaigle";
+import Serpentard from "./components/serpentard";
 
 export default function App() {
   const location = useLocation();
@@ -21,7 +23,7 @@ export default function App() {
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
-          <Route path="/house" element={<Poufsouffle />} />
+          <Route path="/house" element={<Serpentard />} />
 
           <Route
             path="/quiz"
