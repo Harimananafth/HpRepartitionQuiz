@@ -6,6 +6,7 @@ import { quizData } from "../data/quiz.data.js";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FantasyLoader from "../components/fantasyLoader";
+import { useQuiz } from "../context/quizContext.jsx";
 
 export default function Quiz() {
   const navigate = useNavigate();
@@ -17,19 +18,23 @@ export default function Quiz() {
     Serdaigle: 0,
   });
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const { setHouse } = useQuiz(); 
+
   useEffect(() => {
     if (i >= quizData.quiz.length) {
       const maxPoints = Math.max(...Object.values(scores));
-      const house = Object.keys(scores).find((h) => scores[h] === maxPoints);
-      localStorage.setItem("house", house);
+      const houseName = Object.keys(scores).find(
+        (h) => scores[h] === maxPoints,
+      );
+      setHouse(houseName); 
+
       const timer = setTimeout(() => {
         navigate("/result");
       }, 15000);
 
       return () => clearTimeout(timer);
     }
-  }, [i, scores, navigate]);
-
+  }, [i, scores, navigate, setHouse]); 
   function addPoints(house, points) {
     if (isTransitioning) return;
     setIsTransitioning(true);

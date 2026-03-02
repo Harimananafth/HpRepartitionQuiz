@@ -5,14 +5,17 @@ import Gryffondor from "../components/gryffondor";
 import Serpentard from "../components/serpentard";
 import Serdaigle from "../components/serdaigle";
 import Poufsouffle from "../components/poufsouffle";
+import { useQuiz } from "../context/quizContext";
 
 export default function Result() {
   const house = localStorage.getItem("house");
   const navigate = useNavigate();
 
+  const { setHouse } = useQuiz();
+
   const handleRetry = () => {
+    setHouse(null);
     navigate("/");
-    localStorage.removeItem("house");
   };
 
   return (

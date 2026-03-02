@@ -1,9 +1,12 @@
+
 import { Navigate } from "react-router-dom";
+import { useQuiz } from "../context/quizContext";
 
 export default function ResultGuard({ children }) {
-  const house = localStorage.getItem("house");
+  const { house } = useQuiz();
   if (!house) {
-    return <Navigate to="/quiz" replace />;
+    return <Navigate to="/" replace />;
   }
+
   return children;
-};
+}
