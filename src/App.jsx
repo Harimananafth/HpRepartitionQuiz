@@ -13,8 +13,8 @@ export default function App() {
   const location = useLocation();
 
   return (
-    <div className="bg relative overflow-hidden">
-      <MagicDust count={100} />
+    <div className="bg-main-layout relative overflow-hidden">
+      <MagicDust count={150} />
 
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>

@@ -1,3 +1,8 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: false;
+}
+
 @font-face {
   font-family: "MagicSchoolOne";
   src: url("./fonts/MagicSchoolOne.ttf") format("truetype");
@@ -13,91 +18,59 @@
   src: url("./fonts/Cinzel-VariableFont_wght.ttf") format("truetype");
   font-display: swap;
 }
-@import "tailwindcss";
-@plugin "daisyui" {
-  themes: false;
-}
 
 @theme {
-  --font-MagicSchoolOne: "MagicSchoolOne", serif;
-  --font-MagicSchoolTwo: "MagicSchoolTwo", serif;
+  --font-magic-one: "MagicSchoolOne", serif;
+  --font-magic-two: "MagicSchoolTwo", serif;
   --font-Cinzel: "Cinzel", serif;
+  
   --color-dark-blue: #0a0e1a;
   --color-gold: #d4af37;
-}
 
-@keyframes magic-float {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateY(-100px) rotate(360deg);
-    opacity: 0;
-  }
-}
-.animate-magic-float {
-  animation-name: magic-float;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-.bg {
-  background-image:
-    url(./assets/horizons_village.png),
-    linear-gradient(180deg, #15111d, #323657 121.35%);
-  background-repeat: no-repeat;
+  --animate-float: floating 4s ease-in-out infinite;
+  --animate-fade-in: fadeIn 0.5s ease-out forwards;
 
-  background-position: center bottom;
-  background-size: 250% auto, cover; 
-}
+  @keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
 
-@media (min-width: 768px) {
-  .bg {
-    background-size: 150% auto, cover;
-    background-position: center 101%, bottom;
+  @keyframes fadeIn {
+    0% { transform: translateY(-10px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
   }
 }
 
-@media (min-width: 1280px) {
-  .bg {
-    background-size: 110% auto, cover; 
-  }
-}
+@layer components {
+  .bg-main-layout {
+    @apply relative min-h-screen overflow-hidden;
+    background-image: 
+      url("./assets/horizons_village.png"), 
+      linear-gradient(180deg, #15111d, #323657 121.35%);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 250% auto, cover;
 
-.animate-float {
-  animation: floating 4s ease-in-out infinite;
-}
+    @media (min-width: 768px) {
+      background-size: 150% auto, cover;
+      background-position: center 101%, bottom;
+    }
 
-@keyframes floating {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
-}
+    @media (min-width: 1280px) {
+      background-size: 110% auto, cover;
+    }
+  }
 
-.magic-text {
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-}
-.btn-magic:hover {
-  color: var(--color-gold);
-  border-color: white;
-  background: white;
-  box-shadow:
-    0 0 10px var(--color-gold),
-    0 0 20px var(--color-gold);
-}
-@keyframes fadeIn {
-  0% {
-    transform: translateY(-10px);
-    opacity: 0;
+  .magic-text {
+    @apply text-gold;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
   }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
+
+  .btn-magic {
+    @apply transition-all duration-300 border border-transparent px-6 py-2 rounded-lg;
+    &:hover {
+      @apply bg-white text-gold border-white;
+      box-shadow: 0 0 10px var(--color-gold), 0 0 20px var(--color-gold);
+    }
   }
-}
-.animate-fade-in {
-  animation: fadeIn 0.5s ease-out forwards;
 }
