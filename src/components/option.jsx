@@ -7,7 +7,7 @@ export default function Option({ option, onClick, isTransitioning }) {
       whileTap={isTransitioning ? {} : { scale: 0.98 }}
       onClick={onClick}
       className={`cursor-pointer relative group font-Cinzel font-bold 
-                  w-full min-h-[50px] md:h-14
+                  w-full min-h-12.5 md:h-14
                   flex items-center justify-center border-2 md:border-4
                   border-double border-gold text-gold
                   rounded-sm overflow-hidden

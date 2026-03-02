@@ -24,10 +24,6 @@
   --font-Cinzel: "Cinzel", serif;
   --color-dark-blue: #0a0e1a;
   --color-gold: #d4af37;
-  --image-gryffondor: url(/house/bg-gryffondor.jpg);
-  --image-serpentard: url(/house/bg-serpentard.jpg);
-  --image-poufsouffle: url(/house/bg-poufsouffle.jpg);
-  --image-serdaigle: url(/house/bg-serdaigle.jpg);
 }
 
 @keyframes magic-float {
@@ -50,7 +46,7 @@
 }
 .bg {
   background-image:
-    url(/horizons_village.png),
+    url(./assets/horizons_village.png),
     linear-gradient(180deg, #15111d, #323657 121.35%);
   background-repeat: no-repeat;
 

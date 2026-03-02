@@ -1,3 +1,6 @@
+import pfsPic from "../assets/house/psf-picture.png";
+import pfs from "../assets/house/poufsouffle.gif";
+
 export default function Poufsouffle() {
   return (
     <div className="min-h-screen md:h-screen w-full bg-[url(/house/bg-poufsouffle.jpg)] bg-cover bg-center flex items-center justify-center p-4 md:p-12 font-serif overflow-x-hidden">
@@ -9,7 +12,7 @@ export default function Poufsouffle() {
           <div className="relative mb-4 md:mb-6">
             <div className="absolute inset-0 bg-gold/10 blur-3xl rounded-full scale-75"></div>
             <img
-              src="/house/poufsouffle.gif"
+              src={pfs}
               alt="Emblème de Poufsouffle"
               className="relative h-32 md:h-40 lg:h-52 object-contain drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]"
             />
@@ -46,7 +49,7 @@ export default function Poufsouffle() {
           {/* Image de Cédric  */}
           <div className="relative mt-6 flex justify-center items-end h-36 md:h-48 lg:h-64">
             <img
-              src="/house/psf-picture.png"
+              src={pfsPic}
               alt="Cedric Diggory"
               className="h-full w-auto object-contain drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)]"
             />

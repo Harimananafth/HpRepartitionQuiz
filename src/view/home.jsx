@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion, scale } from "motion/react";
 import { pageVariants, item } from "../utils/page.animation";
+import logo from "../assets/logo.png";
 
 export default function Home() {
   return (
@@ -48,7 +49,7 @@ export default function Home() {
           <Link
             to="/quiz"
             className="relative group font-Cinzel font-bold 
-                       w-full max-w-[300px] md:w-3/4 h-14 mt-6 
+                       w-full max-w-75 md:w-3/4 h-14 mt-6 
                        flex items-center justify-center
                        border-2 border-gold text-gold
                        rounded-sm overflow-hidden
@@ -63,7 +64,7 @@ export default function Home() {
       {/* Container Logo  */}
       <div className="flex items-center justify-center w-full md:w-auto animate-float">
         <img
-          src="/logo.png"
+          src={logo}
           alt="Logo Poudlard"
           className="h-48 md:h-64 lg:h-80 drop-shadow-[0_0_15px_rgba(255,215,0,0.4)] animate-float"
         />

@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { pageVariants, illustrationVar } from "../utils/page.animation";
 import QuizForm from "../components/quiz.form";
 import Option from "../components/option";
-import quizData from "../data/quiz.json";
+import { quizData } from "../data/quiz.data.js";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FantasyLoader from "../components/fantasyLoader";

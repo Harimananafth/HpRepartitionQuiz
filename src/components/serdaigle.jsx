@@ -1,3 +1,5 @@
+import srdPic from "../assets/house/srd-picture.png";
+import srd from "../assets/house/serdaigle.gif";
 export default function Serdaigle() {
   return (
     /* h-screen sur desktop, min-h-screen sur mobile pour laisser respirer le contenu */
@@ -11,7 +13,7 @@ export default function Serdaigle() {
           <div className="relative mb-4 md:mb-6">
             <div className="absolute inset-0 bg-blue-400/10 blur-3xl rounded-full scale-75"></div>
             <img
-              src="/house/serdaigle.gif"
+              src={srd}
               alt="Emblème de Serdaigle"
               className="relative h-32 md:h-40 lg:h-52 object-contain drop-shadow-[0_0_20px_rgba(96,165,250,0.4)]"
             />
@@ -48,7 +50,7 @@ export default function Serdaigle() {
           {/* Cho et Luna  */}
           <div className="relative mt-6 flex justify-center items-end h-38 md:h-48 lg:h-64">
             <img
-              src="/house/srd-picture.png"
+              src={srdPic}
               alt="Cho et Luna"
               className="h-full w-auto object-contain drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)]"
             />

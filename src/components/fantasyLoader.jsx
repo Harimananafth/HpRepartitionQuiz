@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { loaderSentences } from "../utils/loaderSentences";
 import { loaderVariants, pageloaderVariants } from "../utils/page.animation";
+import choixpeau from "../assets/Choixpeau.gif";
 
 export default function FantasyLoader() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,7 +25,7 @@ export default function FantasyLoader() {
       exit="exit"
       className="flex flex-col items-center justify-center gap-4 h-screen bg-black/50 text-white font-bold font-Cinzel"
     >
-      <img src="/Choixpeau.gif" alt="Choixpeau magique" className="h-28" />
+      <img src={choixpeau} alt="Choixpeau magique" className="h-28" />
 
       <AnimatePresence mode="wait">
         <motion.p

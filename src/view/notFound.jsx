@@ -21,7 +21,7 @@ export default function NotFound() {
           variants={item}
           className="relative flex flex-col items-center"
         >
-          <h1 className="text-7xl md:text-9xl font-Cinzel font-bold text-transparent bg-clip-text bg-gradient-to-b from-gold via-yellow-200 to-gold opacity-90 leading-none">
+          <h1 className="text-7xl md:text-9xl font-Cinzel font-bold text-transparent bg-clip-text bg-linear-to-b from-gold via-yellow-200 to-gold opacity-90 leading-none">
             404
           </h1>
           <div className="w-full flex items-center justify-center -mt-2 md:-mt-4">
