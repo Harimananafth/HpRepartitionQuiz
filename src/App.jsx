@@ -5,7 +5,6 @@ import Quiz from "./App/quiz";
 import MagicDust from "./components/magicDust";
 import "./App.css";
 import Result from "./App/result";
-import FantasyLoader from "./components/fantasyLoader";
 import QuizGuard from "./routes/quizGuard";
 import ResultGuard from "./routes/resultGuard";
 import NotFound from "./App/notFound";

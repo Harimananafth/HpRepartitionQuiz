@@ -52,20 +52,37 @@
   background-image:
     url(/horizons_village.png),
     linear-gradient(180deg, #15111d, #323657 121.35%);
+  background-repeat: no-repeat;
 
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: 170%, cover;
+  background-position: center bottom;
+  background-size: 250% auto, cover; 
+}
 
-  background-position:
-    center 101%,
-    bottom;
+@media (min-width: 768px) {
+  .bg {
+    background-size: 150% auto, cover;
+    background-position: center 101%, bottom;
+  }
+}
+
+@media (min-width: 1280px) {
+  .bg {
+    background-size: 110% auto, cover; 
+  }
+}
+
+.animate-float {
+  animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
 
 .magic-text {
-  text-shadow:
-    0 0 10px rgba(212, 175, 55, 0.5),
-    0 0 20px rgba(212, 175, 55, 0.2);
-  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 .btn-magic:hover {
   color: var(--color-gold);
