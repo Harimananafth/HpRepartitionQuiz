@@ -1,6 +1,8 @@
 # ⚡ THE SORTING HAT • EXPERIENCE
 
-![Blason de maison](./src/assets/Choixpeau.gif)
+<p align="center">
+  <img src="./src/assets/Choixpeau.gif" width="300" />
+</p>
 
 > "Il n'y a rien de caché dans votre tête que le Choixpeau ne puisse voir..."
 
