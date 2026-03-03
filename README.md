@@ -1,16 +1,63 @@
-# React + Vite
+# ⚡ THE SORTING HAT • EXPERIENCE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<pre>
+            .
+           / \
+          /   \
+         /_____\
+        |       |
+        |  (o)  |
+        |_______|
+       /         \
+      /   REVEAL  \
+     /    YOUR     \
+    /     HOUSE     \
+   '-----------------'
+</pre>
 
-Currently, two official plugins are available:
+> "Il n'y a rien de caché dans votre tête que le Choixpeau ne puisse voir..."
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✦ L'EXPÉRIENCE
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Cette application est une immersion interactive dans l'univers de Poudlard. Bien plus qu'un simple questionnaire, c'est une aventure visuelle pilotée par une logique de score précise et des animations fluides.
 
-## Expanding the ESLint configuration
+Le Choixpeau analyse vos réponses en temps réel, pèse vos traits de caractère et vous guide à travers un tunnel de chargement mystique avant de révéler votre véritable maison.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 LA STACK MAGIQUE
+
+| Composant      | Technologie  |
+| -------------- | ------------ |
+| **Framework**  | React 19     |
+| **Styling**    | Tailwind v4  |
+| **Animations** | Motion       |
+| **Navigation** | React Router |
+| **State**      | Context API  |
+
+---
+
+## 📜 INSTALLATION
+
+Suivez ces étapes pour invoquer le projet sur votre machine locale :
+
+### 1. Cloner le projet
+
+````bash
+git clone [https://github.com/Harimananafth/HpRepartitionQuiz.git](https://github.com/Harimananafth/HpRepartitionQuiz.git)
+
+### 2. Installer les dépendances
+```bash
+npm install
+
+### 3. Lancer le projet
+```bash
+npm run dev
+L'application sera disponible sur http://localhost:5173
+
+<div align="center">
+<sub>Développé avec passion et un soupçon de magie noire.</sub>
+</div>
+````
