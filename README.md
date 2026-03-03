@@ -34,6 +34,7 @@ Suivez ces étapes pour invoquer le projet sur votre machine locale :
 
 ````bash
 git clone [https://github.com/Harimananafth/HpRepartitionQuiz.git](https://github.com/Harimananafth/HpRepartitionQuiz.git)
+cd HpRepartitionQuiz
 ````
 
 ### 2. Installer les dépendances
