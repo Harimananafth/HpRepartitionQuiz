@@ -1,4 +1,3 @@
-import { Rotate3D } from "lucide-react";
 
 const pageVariants = {
   initial: {

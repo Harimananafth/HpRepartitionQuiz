@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { motion, scale } from "motion/react";
+import { motion } from "motion/react";
 import { pageVariants, item } from "../utils/page.animation";
 import logo from "../assets/logo.png";
 
@@ -10,7 +10,7 @@ export default function Home() {
       initial="initial"
       animate="animate"
       exit="exit"
-      className="p-6 md:p-12 lg:p-25 min-h-screen flex flex-col-reverse md:flex-row items-center justify-center md:justify-between gap-10"
+      className="p-6 md:p-12 lg:p-24 min-h-screen flex flex-col-reverse md:flex-row items-center justify-center md:justify-between gap-10"
     >
       {/* Container Texte  */}
       <div className="flex flex-col justify-center items-center md:items-start w-full md:w-3/5 gap-3 text-center md:text-left z-10">
@@ -49,7 +49,7 @@ export default function Home() {
           <Link
             to="/quiz"
             className="relative group font-Cinzel font-bold 
-                       w-full max-w-75 md:w-3/4 h-14 mt-6 
+                       w-full max-w-full md:w-3/4 h-14 mt-6 
                        flex items-center justify-center
                        border-2 border-gold text-gold
                        rounded-sm overflow-hidden
@@ -62,7 +62,7 @@ export default function Home() {
       </div>
 
       {/* Container Logo  */}
-      <div className="flex items-center justify-center w-full md:w-auto animate-float">
+      <div className="flex items-center justify-center w-full md:w-auto ">
         <img
           src={logo}
           alt="Logo Poudlard"

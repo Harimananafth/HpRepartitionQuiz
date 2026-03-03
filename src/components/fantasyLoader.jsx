@@ -4,18 +4,24 @@ import { loaderSentences } from "../utils/loaderSentences";
 import { loaderVariants, pageloaderVariants } from "../utils/page.animation";
 import choixpeau from "../assets/Choixpeau.gif";
 
-export default function FantasyLoader() {
+export default function FantasyLoader({ onComplete }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    if (currentIndex < loaderSentences.length - 1) {
-      const timer = setTimeout(() => {
-        setCurrentIndex((prev) => prev + 1);
-      }, 3000);
+ useEffect(() => {
+   let finalTimer;
+   const timer = setTimeout(() => {
+     if (currentIndex < loaderSentences.length - 1) {
+       setCurrentIndex((prev) => prev + 1);
+     } else {
+       finalTimer = setTimeout(() => onComplete(), 2000);
+     }
+   }, 3000);
 
-      return () => clearTimeout(timer);
-    }
-  }, [currentIndex]);
+   return () => {
+     clearTimeout(timer);
+     if (finalTimer) clearTimeout(finalTimer);
+   };
+ }, [currentIndex, onComplete]);
 
   return (
     <motion.div

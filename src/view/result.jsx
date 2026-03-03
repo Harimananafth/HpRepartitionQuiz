@@ -1,27 +1,35 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react"; // Reste cohérent avec tes imports
 import { pageloaderVariants, pageVariants } from "../utils/page.animation";
 import { useNavigate } from "react-router-dom";
+import { useQuiz } from "../context/quizContext";
+
 import Gryffondor from "../components/gryffondor";
 import Serpentard from "../components/serpentard";
 import Serdaigle from "../components/serdaigle";
 import Poufsouffle from "../components/poufsouffle";
-import { useQuiz } from "../context/quizContext";
+
+const HOUSE_COMPONENTS = {
+  Gryffondor: Gryffondor,
+  Serpentard: Serpentard,
+  Serdaigle: Serdaigle,
+  Poufsouffle: Poufsouffle,
+};
 
 export default function Result() {
-  const house = localStorage.getItem("house");
   const navigate = useNavigate();
-
-  const { setHouse } = useQuiz();
+  const { house, setHouse } = useQuiz();
 
   const handleRetry = () => {
-    setHouse(null);
-    navigate("/");
+    setHouse(null); 
+    navigate("/quiz");
   };
 
+  const ActiveHouseComponent = HOUSE_COMPONENTS[house];
+
   return (
-    <div className="relative min-h-screen w-full font-serif flex flex-col">
+    <div className="relative min-h-screen w-full font-serif flex flex-col overflow-x-hidden">
       <AnimatePresence mode="wait">
-        {house && (
+        {ActiveHouseComponent ? (
           <motion.div
             key={house}
             variants={pageloaderVariants}
@@ -30,27 +38,29 @@ export default function Result() {
             exit="exit"
             className="relative z-10 w-full"
           >
-            {house === "Gryffondor" && <Gryffondor />}
-            {house === "Serpentard" && <Serpentard />}
-            {house === "Serdaigle" && <Serdaigle />}
-            {house === "Poufsouffle" && <Poufsouffle />}
+            <ActiveHouseComponent />
           </motion.div>
+        ) : (
+          <div className="flex-1 flex items-center justify-center text-gold">
+            Le Choixpeau n'a pas encore parlé...
+          </div>
         )}
       </AnimatePresence>
+
       <motion.button
         variants={pageVariants}
         initial="initial"
         animate="animate"
-        exit="exit"
         whileTap={{ scale: 0.95 }}
         whileHover={{ scale: 1.05 }}
         onClick={handleRetry}
-        className="fixed z-50 bottom-4 left-1/2 -translate-x-1/2 cursor-pointer 
-                   px-6 py-3 md:px-8 md:py-3 bg-black/60 backdrop-blur-xl 
-                   border border-gold/30 rounded-full 
-                   text-[10px] md:text-xs font-Cinzel tracking-[0.2em] text-gold
+        className="fixed z-50 bottom-8 left-1/2 -translate-x-1/2 cursor-pointer 
+                   px-8 py-3 bg-black/80 backdrop-blur-2xl 
+                   border border-gold/40 rounded-full 
+                   text-xs font-Cinzel tracking-[0.2em] text-gold
                    hover:bg-gold hover:text-black transition-all duration-500 
-                   shadow-[0_0_20px_rgba(212,175,55,0.4)] flex items-center gap-3"
+                   shadow-[0_10px_30px_rgba(0,0,0,0.5),0_0_20px_rgba(212,175,55,0.2)] 
+                   flex items-center gap-3 whitespace-nowrap"
       >
         <span className="text-lg">↺</span>
         <span>Refaire le test</span>

@@ -3,13 +3,14 @@ import { pageVariants, illustrationVar } from "../utils/page.animation";
 import QuizForm from "../components/quiz.form";
 import Option from "../components/option";
 import { quizData } from "../data/quiz.data.js";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FantasyLoader from "../components/fantasyLoader";
 import { useQuiz } from "../context/quizContext.jsx";
 
 export default function Quiz() {
   const navigate = useNavigate();
+  const { setHouse } = useQuiz();
   const [i, setI] = useState(0);
   const [scores, setScores] = useState({
     Gryffondor: 0,
@@ -17,43 +18,54 @@ export default function Quiz() {
     Poufsouffle: 0,
     Serdaigle: 0,
   });
+
+
+  const [tempHouse, setTempHouse] = useState(null);
+  const [isFinished, setIsFinished] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const { setHouse } = useQuiz(); 
 
-  useEffect(() => {
-    if (i >= quizData.quiz.length) {
-      const maxPoints = Math.max(...Object.values(scores));
-      const houseName = Object.keys(scores).find(
-        (h) => scores[h] === maxPoints,
-      );
-      setHouse(houseName); 
+  const handleQuizEnd = (finalScores) => {
+    const houseName = Object.entries(finalScores).reduce((a, b) =>
+      a[1] > b[1] ? a : b,
+    )[0];
 
-      const timer = setTimeout(() => {
-        navigate("/result");
-      }, 15000);
 
-      return () => clearTimeout(timer);
-    }
-  }, [i, scores, navigate, setHouse]); 
-  function addPoints(house, points) {
+    setTempHouse(houseName);
+    setIsFinished(true);
+  };
+
+  function addPoints(optionPoints) {
     if (isTransitioning) return;
+    const newScores = { ...scores };
+    Object.entries(optionPoints).forEach(([house, pts]) => {
+      newScores[house] = (newScores[house] || 0) + pts;
+    });
+
+    setScores(newScores);
     setIsTransitioning(true);
-    setScores((prevScores) => ({
-      ...prevScores,
-      [house]: prevScores[house] + points,
-    }));
+
     setTimeout(() => {
-      setI((prevI) => prevI + 1);
-      setIsTransitioning(false);
+      if (i < quizData.quiz.length - 1) {
+        setI((prev) => prev + 1);
+        setIsTransitioning(false);
+      } else {
+        handleQuizEnd(newScores);
+      }
     }, 300);
   }
 
-  const question = quizData.quiz[i];
-
-  if (!question) {
-    return <FantasyLoader />;
+  if (isFinished) {
+    return (
+      <FantasyLoader
+        onComplete={() => {
+          setHouse(tempHouse);
+          navigate("/result");
+        }}
+      />
+    );
   }
 
+  const question = quizData.quiz[i];
   return (
     <motion.main
       variants={pageVariants}
@@ -86,11 +98,7 @@ export default function Quiz() {
               <Option
                 key={index}
                 option={option}
-                onClick={() => {
-                  const house = Object.keys(option.points)[0];
-                  const points = option.points[house];
-                  addPoints(house, points);
-                }}
+                onClick={() => addPoints(option.points)}
                 isTransitioning={isTransitioning}
               />
             ))}
