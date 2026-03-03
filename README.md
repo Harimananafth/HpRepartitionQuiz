@@ -4,7 +4,7 @@
   <img src="./src/assets/Choixpeau.gif" width="150" />
 </p>
 
-<p style="text-align:center; color:gray">"Il n'y a rien de caché dans votre tête que le Choixpeau ne puisse voir..."</p>
+<p align="center" >"Il n'y a rien de caché dans votre tête que le Choixpeau ne puisse voir..."</p>
 
 ---
 
