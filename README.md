@@ -1,4 +1,4 @@
-# ⚡ THE SORTING HAT • EXPERIENCE
+# ⚡ LE CHOIXPEAU MAGIQUE 
 
 <p align="center">
   <img src="./src/assets/Choixpeau.gif" width="150" />
@@ -20,11 +20,9 @@ Le Choixpeau analyse vos réponses en temps réel, pèse vos traits de caractèr
 
 | Composant      | Technologie  |
 | -------------- | ------------ |
-| **Framework**  | React 19     |
-| **Styling**    | Tailwind v4  |
+| **Framework**  | React        |
+| **Styling**    | Tailwind     |
 | **Animations** | Motion       |
-| **Navigation** | React Router |
-| **State**      | Context API  |
 
 ---
 
@@ -51,5 +49,5 @@ npm run dev
 L'application sera disponible sur http://localhost:5173
 
 <div align="center">
-<sub>Développé avec passion et un soupçon de magie noire.</sub>
+<sub>Développé avec passion et un soupçon de magie noire. Mdrr</sub>
 </div>
