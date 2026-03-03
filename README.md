@@ -1,19 +1,6 @@
 # ⚡ THE SORTING HAT • EXPERIENCE
 
-<pre>
-            .
-           / \
-          /   \
-         /_____\
-        |       |
-        |  (o)  |
-        |_______|
-       /         \
-      /   REVEAL  \
-     /    YOUR     \
-    /     HOUSE     \
-   '-----------------'
-</pre>
+![Blason de maison](./src/assets/Choixpeau.gif)
 
 > "Il n'y a rien de caché dans votre tête que le Choixpeau ne puisse voir..."
 
@@ -47,17 +34,20 @@ Suivez ces étapes pour invoquer le projet sur votre machine locale :
 
 ````bash
 git clone [https://github.com/Harimananafth/HpRepartitionQuiz.git](https://github.com/Harimananafth/HpRepartitionQuiz.git)
+````
 
 ### 2. Installer les dépendances
-```bash
+````bash
 npm install
+````
 
 ### 3. Lancer le projet
-```bash
+````bash
 npm run dev
+````
+
 L'application sera disponible sur http://localhost:5173
 
 <div align="center">
 <sub>Développé avec passion et un soupçon de magie noire.</sub>
 </div>
-````
