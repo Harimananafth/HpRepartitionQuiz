@@ -1,7 +1,7 @@
 # ⚡ THE SORTING HAT • EXPERIENCE
 
 <p align="center">
-  <img src="./src/assets/Choixpeau.gif" width="300" />
+  <img src="./src/assets/Choixpeau.gif" width="150" />
 </p>
 
 > "Il n'y a rien de caché dans votre tête que le Choixpeau ne puisse voir..."
