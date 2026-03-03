@@ -2,9 +2,8 @@
 
 <p align="center">
   <img src="./src/assets/Choixpeau.gif" width="150" />
+  <sub color="gray">"Il n'y a rien de caché dans votre tête que le Choixpeau ne puisse voir..."</sub>
 </p>
-
-> "Il n'y a rien de caché dans votre tête que le Choixpeau ne puisse voir..."
 
 ---
 
